@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <!-- Referência: https://developers.google.com/chart/interactive/docs/gallery/orgchart -->
+
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['orgchart']});
+      google.setOnLoadCallback(drawChart);
+      
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+        data.addRows([
+          [{v:'TJPE', f:'TJPE'}, '', ''],
+          [{v:'PRESIDENCIA', f:'PRESIDENCIA'}, 'TJPE', ''],
+          [{v:'COMITE GEST PROJ PROC JUD ELET', f:'COMITE GEST PROJ PROC JUD ELET'}, 'PRESIDENCIA', ''],
+          [{v:'ASSESSORIA ESP PRESIDENCIA', f:'ASSESSORIA ESP PRESIDENCIA'}, 'PRESIDENCIA', ''],
+          [{v:'NUCLEO MODERNIZACAO JUDICIARIO', f:'NUCLEO MODERNIZACAO JUDICIARIO'}, 'ASSESSORIA ESP PRESIDENCIA', ''],
+          [{v:'CONSULTORIA JURIDICA', f:'CONSULTORIA JURIDICA'}, 'PRESIDENCIA', ''],
+          [{v:'NUCLEO DE APOIO ADMINISTRATIVO', f:'NUCLEO DE APOIO ADMINISTRATIVO'}, 'CONSULTORIA JURIDICA', ''],
+          [{v:'NUCLEO ORIENTA JURIDI SERVIDOR', f:'NUCLEO ORIENTA JURIDI SERVIDOR'}, 'CONSULTORIA JURIDICA', ''],
+          [{v:'ASSESSORIA JURIDICA', f:'ASSESSORIA JURIDICA'}, 'CONSULTORIA JURIDICA', ''],
+          [{v:'VICE-PRESIDENCIA', f:'VICE-PRESIDENCIA'}, 'TJPE', ''],
+          [{v:'ASSESSORIA ESP VICE-PRESID', f:'ASSESSORIA ESP VICE-PRESID'}, 'VICE-PRESIDENCIA', ''],
+          [{v:'SECRETARIA GERAL VICE-PRESID', f:'SECRETARIA GERAL VICE-PRESID'}, 'VICE-PRESIDENCIA', ''],
+          [{v:'GAB VICE PRESIDENCIA', f:'GAB VICE PRESIDENCIA'}, 'VICE-PRESIDENCIA', ''],
+          [{v:'CORREGEDORIA GERAL DA JUSTICA', f:'CORREGEDORIA GERAL DA JUSTICA'}, 'TJPE', ''],
+          [{v:'GABINETES DE DESEMBARGADORES', f:'GABINETES DE DESEMBARGADORES'}, 'TJPE', ''],
+          [{v:'CONSELHO DA MAGISTRATURA', f:'CONSELHO DA MAGISTRATURA'}, 'TJPE', ''],
+          [{v:'GRUPO CAMARAS DIREITO PUBLICO', f:'GRUPO CAMARAS DIREITO PUBLICO'}, 'TJPE', ''],
+      
+      /*['Alice', 'Mike', ''],
+          ['Bob', 'Jim', 'Bob Sponge'],
+      ['Carol', 'Bob', '']*/
+        ]);
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, {allowHtml:true, allowCollapse:true});
+      }
+    </script>
+  </head>
+
+  <body>
+    *Duplo-clique expande ou recolhe os itens inferiores.
+    <div id='chart_div'></div>
+  </body>
+</html>
