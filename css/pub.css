@@ -103,14 +103,22 @@ ul{
 
 /******************************************************** contato ************************************************************/
 
+.titleContato{
+    grid-area: tilt;
+    grid-row: auto;
+    color: white;
+    place-self: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
 .content_con{
     grid-area:contato;
     display: grid;
     grid-template-areas:
-    'text text wt img img'
-    'text text in img img'
-    'text text gm img img'
-    'text text lk img img';
+    'tilt tilt tilt tilt tilt'
+    'text text wt gm img'
+    'text text in lk img'
 }
 
 .zap-section{
@@ -148,7 +156,7 @@ ul{
     min-height: 2.5em;
     background: #A9ADB6;
     border-radius: 0.25em;
-    perspective: 300;
+    perspective: 500px;
     box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0.25em 1em rgba(0, 0, 0, 0.1);
 }
   
@@ -238,7 +246,7 @@ ul{
     min-height: 2.5em;
     background: #A9ADB6;
     border-radius: 0.25em;
-    perspective: 300;
+    perspective: 500px;
     box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0.25em 1em rgba(0, 0, 0, 0.1);
 }
   
@@ -335,7 +343,7 @@ ul{
     min-height: 2.5em;
     background: #A9ADB6;
     border-radius: 0.25em;
-    perspective: 300;
+    perspective: 500px;
     box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0.25em 1em rgba(0, 0, 0, 0.1);
 }
   
@@ -432,7 +440,7 @@ ul{
     min-height: 2.5em;
     background: #A9ADB6;
     border-radius: 0.25em;
-    perspective: 300;
+    perspective: 500px;
     box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0.25em 1em rgba(0, 0, 0, 0.1);
   }
   
@@ -529,7 +537,7 @@ ul{
     min-height: 2.5em;
     background: #A9ADB6;
     border-radius: 0.25em;
-    perspective: 300;
+    perspective: 500px;
     box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0.25em 1em rgba(0, 0, 0, 0.1);
   }
   
